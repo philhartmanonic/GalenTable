@@ -43,4 +43,9 @@ class RestaurantsController < ApplicationController
     @restaurant.destroy
     redirect_to action: :index
   end
+
+  private
+    def restaurant_params
+      params.require(:restaurant).permit(:name, :description, :phone, :address_one, :address_two, :city, :state, :zip_code)
+    end
 end

@@ -1,2 +1,34 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<h1>Every Restaurant</h1>
+
+<% if user_signed_in? %>
+	<h1>Welcome!</h1>
+	<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<% end %>
+
+<table id = "r-table">
+	<th>Name</th>
+	<th>Address</th>
+	<th>Phone</th>
+	<th colspan = "3">Action</th>
+
+	<% @restaurant.each do |r| %>
+		<tr>
+			<p>
+				<td><%= r.name %></td>
+				<td><%= r.full_address %></td>
+				<td><%= r.phone %></td>
+				<td><%= r.description %></td>
+			</p>
+			<p>
+				<td><%= link_to "More", r %></td></br>
+				<% if user_signed_in? %>
+					<td><%= link_to "Edit", edit_restaurant_path(r) %></td></br>
+					<td><%= link_to "Remove", r, method: :delete, data: { confirm: "Are you sure?" } %></td>
+				<% end %>
+			</p>
+		</tr>
+	<% end %>
+</table>
+<br><br>
+
+<%= link_to "Add", new_restaurant_path %>

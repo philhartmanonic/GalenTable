@@ -1,0 +1,37 @@
+<%= form_for @restaurant do |f| %>
+	<%= field_set_tag do %>
+  		<%= label_tag(:q, "Name:") %>
+  		<%= f.text_field :name %>
+  	<% end %>
+  	<%= field_set_tag do %>
+ 	 	<%= label_tag(:q, "Description:") %>
+  		<%= f.text_area :description, size: "60x12" %>
+ 	<% end %>
+	<%= field_set_tag do %>
+  		<%= label_tag(:q, "Street One:") %>
+  		<%= f.text_field :address_one %>
+ 	<% end %>
+  <%= field_set_tag do %>
+      <%= label_tag(:q, "Street Two:") %>
+      <%= f.text_field :address_two %>
+  <% end %>
+  <%= field_set_tag do %>
+      <%= label_tag(:q, "City:") %>
+      <%= f.text_field :city %>
+  <% end %>
+  <%= field_set_tag do %>
+      <%= label_tag(:q, "State:") %>
+      <%= f.text_field :state %>
+  <% end %>
+  <%= field_set_tag do %>
+      <%= label_tag(:q, "Zip Code:") %>
+      <%= f.text_field :zip_code %>
+  <% end %>
+	<%= field_set_tag do %>
+  		<%= label_tag(:q, "Phone:") %>
+  		<%= f.text_field :phone %>
+ 	<% end %>
+	<%= field_set_tag do %>
+  		<%= f.submit %>
+  	<% end %>
+<% end %>
