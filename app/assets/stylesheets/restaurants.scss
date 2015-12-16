@@ -1,3 +1,25 @@
+
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	padding: 10%;
+	color: #00cc66;
+}
+#form {
+	border-style: none;
+}
+.button-submit {
+	color: #ffffff;
+	font-size: 20px;
+	background: #a8cbe3;
+	padding: 18px 25px 18px 25px;
+	text-decoration: none;
+	border: none;
+}
+
+.jumbotron {
+  padding: 0% 0% 0% 5%;
+  background-color: #00cc66;
+}

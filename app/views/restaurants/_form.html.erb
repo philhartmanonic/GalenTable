@@ -1,35 +1,35 @@
 <%= form_for @restaurant do |f| %>
 	<%= field_set_tag do %>
-  		<%= label_tag(:q, "Name:") %>
-  		<%= f.text_field :name %>
+  		<div class="panel panel-default col-md-2" id="form"><%= label_tag(:q, "Name:") %></div>
+  		<div class="panel panel-default col-md-10" id="form"><%= f.text_field :name %></div>
   	<% end %>
   	<%= field_set_tag do %>
- 	 	<%= label_tag(:q, "Description:") %>
-  		<%= f.text_area :description, size: "60x12" %>
+ 	 	  <div class="panel panel-default col-md-2" id="form"><%= label_tag(:q, "Description:") %></div>
+  		<div class="panel panel-default col-md-10" id="form"><%= f.text_area :description, size: "60x12" %></div>
  	<% end %>
 	<%= field_set_tag do %>
-  		<%= label_tag(:q, "Street One:") %>
-  		<%= f.text_field :address_one %>
+  		<div class="panel panel-default col-md-2" id="form"><%= label_tag(:q, "Street One:") %></div>
+  		<div class="panel panel-default col-md-10" id="form"><%= f.text_field :address_one %></div>
  	<% end %>
   <%= field_set_tag do %>
-      <%= label_tag(:q, "Street Two:") %>
-      <%= f.text_field :address_two %>
+      <div class="panel panel-default col-md-2" id="form"><%= label_tag(:q, "Street Two:") %></div>
+      <div class="panel panel-default col-md-10" id="form"><%= f.text_field :address_two %></div>
   <% end %>
   <%= field_set_tag do %>
-      <%= label_tag(:q, "City:") %>
-      <%= f.text_field :city %>
+      <div class="panel panel-default col-md-2" id="form"><%= label_tag(:q, "City:") %></div>
+      <div class="panel panel-default col-md-10" id="form"><%= f.text_field :city %></div>
   <% end %>
   <%= field_set_tag do %>
-      <%= label_tag(:q, "State:") %>
-      <%= f.text_field :state %>
+      <div class="panel panel-default col-md-2" id="form"><%= label_tag(:q, "State:") %></div>
+      <div class="panel panel-default col-md-10" id="form"><%= f.text_field :state %></div>
   <% end %>
   <%= field_set_tag do %>
-      <%= label_tag(:q, "Zip Code:") %>
-      <%= f.text_field :zip_code %>
+      <div class="panel panel-default col-md-2" id="form"><%= label_tag(:q, "Zip Code:") %></div>
+      <div class="panel panel-default col-md-10" id="form"><%= f.text_field :zip_code %></div>
   <% end %>
 	<%= field_set_tag do %>
-  		<%= label_tag(:q, "Phone:") %>
-  		<%= f.text_field :phone %>
+  		<div class="panel panel-default col-md-2" id="form"><%= label_tag(:q, "Phone:") %></div>
+  		<div class="panel panel-default col-md-10" id="form"><%= f.text_field :phone %></div>
  	<% end %>
 	<%= field_set_tag do %>
   		<%= f.submit %>
